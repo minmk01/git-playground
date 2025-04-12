@@ -11,6 +11,8 @@ public class TestController {
 
     //글 생성
     @PostMapping
-    public Post createPost(@RequestBody)
-        
+    public Post createPost(@RequestBody PostRequestDTO postRequestDTO) {
+        Post post = Post.toEntity(postRequestDTO);
+    }
+
 }
